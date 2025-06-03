@@ -124,3 +124,11 @@ Once the setup is complete and your terminal environment is updated:
             ```
         * If errors persist, it might be related to a specific Gazebo version or system configuration. Please open an issue with details.
 * **Package not found / Command not found:** Ensure you have sourced `~/.bashrc` in your current terminal or opened a new terminal after the installation.
+* **Problems with `sudo apt-get upgrade -y`:** This issue can occur during the `ROS 2 installation` phase (Step 4) of the installation. To resolve this, just run on the terminal:
+  ```bash
+  sudo apt-get update --fix-missing
+  ```
+    and then you can restart the installation process with:
+    ```bash
+    ./full_installer.sh
+    ```
