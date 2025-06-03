@@ -160,11 +160,12 @@ if [ ! -z "$NEW_COLCON_WS" ]; then
 fi
 echo "[Step 11] Setting up colcon workspace at $COLCON_WS..."
 # Define the target src directory.
-TARGET_SRC_DIR="$COLCON_WS/src"
+TARGET_SRC_DIR="$COLCON_WS/src/vizzy2"
 # Ensure the src directory exists.
 mkdir -p "$TARGET_SRC_DIR"
 # Change to the src directory to perform the clone.
 cd "$TARGET_SRC_DIR"
+echo "[INFO] Navigated into $TARGET_SRC_DIR."
 # Check if the current directory (src) is already a git repository.
 # We look for the .git folder which indicates the root of a git repository.
 if [ ! -d ".git" ]; then
